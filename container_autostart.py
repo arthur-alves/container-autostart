@@ -23,11 +23,11 @@ class ContainerAutoStart(object):
         if 0 in ps:
             if self.container_id not in ps[1]:
                 print "Reiniciando Docker"
-                self.start_docker()
+                self.start_container()
             else:
                 print "Docker rodando normalmente"
 
-    def start_docker(self):
+    def start_container(self):
         u"""Processo deve ser invocado para iniciar o container."""
         ct_id = self.container_id
         ps = getstatusoutput("docker start {}".format(ct_id))

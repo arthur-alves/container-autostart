@@ -37,6 +37,7 @@ class ContainerAutoStart(object):
             print "Docker iniciado com sucesso"
 
 
+# Exemplo de uso
 if __name__ == "__main__":
     dk = ContainerAutoStart("97ebaea37f47")
     dk.supervisor()
